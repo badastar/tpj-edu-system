@@ -5,7 +5,7 @@ from io import BytesIO
 
 # 1. Gemini API 설정 (발급받은 API 키를 입력하세요)
 # 실제 서비스 시에는 st.secrets 등으로 보안 관리 권장
-API_KEY = "AIzaSyCSj-2mIlaGqXb_udwimX-Yo2QclM3QX-s" 
+API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
